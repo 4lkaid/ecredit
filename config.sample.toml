@@ -9,7 +9,7 @@ debug = true
 # 日志文件目录
 directory = "./log"
 # 日志文件前缀
-file_name_prefix = "projectx.log"
+file_name_prefix = "ecredit.log"
 
 [database]
 # url = "postgres://username:password@host/database"

@@ -27,7 +27,7 @@ pub fn init(config: &Config) -> WorkerGuard {
         .unwrap_or("./log".to_string());
     let file_name_prefix = config
         .get_string("logger.file_name_prefix")
-        .unwrap_or("projectx".to_string());
+        .unwrap_or("ecredit".to_string());
 
     let file_appender = tracing_appender::rolling::daily(directory, file_name_prefix);
     let (non_blocking, worker_guard) = tracing_appender::non_blocking(file_appender);

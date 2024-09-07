@@ -1,10 +1,10 @@
-# ProjectX
+# Ecredit
 
-`ProjectX`是一个基于[axum](https://github.com/tokio-rs/axum)框架的通用模板。
+`Ecredit`是一个基于[axum](https://github.com/tokio-rs/axum)框架的通用模板。
 
 ## 概述
 
-ProjectX是一个web应用模板，旨在为使用Rust开发web应用提供有价值的参考。该模板遵循特定的项目结构约定，以确保开发过程的标准化和可扩展性。
+Ecredit是一个web应用模板，旨在为使用Rust开发web应用提供有价值的参考。该模板遵循特定的项目结构约定，以确保开发过程的标准化和可扩展性。
 
 ## 使用指南
 
@@ -31,7 +31,7 @@ ProjectX是一个web应用模板，旨在为使用Rust开发web应用提供有�
 
 ## 最低支持Rust版本
 
-ProjectX支持的最低Rust版本为1.70。
+Ecredit支持的最低Rust版本为1.70。
 
 ## 许可协议
 
