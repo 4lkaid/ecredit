@@ -11,8 +11,19 @@ use tower::ServiceBuilder;
 
 pub fn init() -> Router {
     Router::new()
-        .route("/", get(handler::demo::root))
-        .route("/users", post(handler::demo::create_user))
+        // 获取资产类型
+        .route("/asset-types", get(handler::asset_type::list_asset_types))
+        // 获取账户操作类型
+        .route(
+            "/action-types",
+            get(handler::action_type::list_action_types),
+        )
+        // 添加资产账户
+        .route("/add-account", post(handler::account::add_account))
+        // 获取资产账户信息
+        .route("/account-info", post(handler::account::account_info))
+        // 资产账户操作
+        .route("/account-action", post(handler::account::account_action))
         .layer(middleware::from_fn(
             request_response_logger::print_request_response,
         ))
