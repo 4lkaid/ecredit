@@ -63,7 +63,7 @@ impl ActionType {
         .fetch_all(database::conn())
         .await?;
         if let Ok(action_type) = serde_json::to_string(&action_type) {
-            con.set_ex("action_type", action_type, 10).await?;
+            let _: () = con.set_ex("action_type", action_type, 10).await?;
         }
         Ok(action_type)
     }

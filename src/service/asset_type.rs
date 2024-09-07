@@ -28,7 +28,7 @@ impl AssetType {
         .fetch_all(database::conn())
         .await?;
         if let Ok(asset_type) = serde_json::to_string(&asset_type) {
-            con.set_ex("asset_type", asset_type, 10).await?;
+            let _: () = con.set_ex("asset_type", asset_type, 10).await?;
         }
         Ok(asset_type)
     }
